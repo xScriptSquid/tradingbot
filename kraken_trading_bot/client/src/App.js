@@ -3,6 +3,7 @@ import MultiTicker from './components/MultiTicker';
 import BalanceDisplay from './components/BalanceDisplay';
 import BotControls from './components/BotControls';
 import PriceChart from './components/PriceChart';
+import PnLTracker from './components/PnLTracker';
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
       <h1>Kraken Trading Bot</h1>
 
       <div style={styles.row}>
+        <div style={styles.column}>
+          <PnLTracker />
+        </div>
         <div style={styles.column}>
           <MultiTicker />
         </div>
@@ -19,6 +23,7 @@ function App() {
       </div>
       <BotControls />
       <PriceChart />
+      
     </div>
   );
 }
